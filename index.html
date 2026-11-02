@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anish Kumar | Data Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f6;--surface:#fff;--ink:#14213d;--muted:#4d5b73;--line:#d3dbe6;--accent:#0b6e8a;--accent-ink:#fff;--star:#f2a900;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1826;--surface:#17233a;--ink:#eaf0f8;--muted:#a3b1c6;--line:#2a3a56;--accent:#5cc2de;--accent-ink:#0f1826;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1826;--surface:#17233a;--ink:#eaf0f8;--muted:#a3b1c6;--line:#2a3a56;--accent:#5cc2de;--accent-ink:#0f1826;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{display:flex;gap:22px;flex-wrap:wrap;padding:20px 0;font-weight:500}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(3rem,9vw,5.6rem);font-weight:800;letter-spacing:-.03em}
+.role{font-size:1.25rem;color:var(--muted);margin:18px 0 28px;max-width:34ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.alt{color:var(--accent)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.chart h2{font-size:1.05rem;margin-bottom:14px}
+.bar{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:12px;margin:10px 0;font-size:.95rem}
+.bar i{display:block;height:14px;border-radius:3px;background:var(--accent)}
+.chart p{margin:14px 0 0;font-size:.85rem;color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:26px;letter-spacing:-.02em}
+.about{max-width:62ch;font-size:1.1rem}
+.star{display:inline-block;margin-top:14px;padding:6px 14px;border-radius:6px;background:var(--star);color:#14213d;font-weight:500;font-size:.95rem}
+.proj{display:grid;grid-template-columns:1fr 1.6fr;gap:8px 36px;padding:26px 0;border-bottom:1px solid var(--line)}
+.proj:first-of-type{padding-top:0}
+.sub{font-size:1.05rem;color:var(--muted);font-weight:500;margin:0 0 6px}
+.sub.next{margin-top:44px}
+.proj h3{font-size:1.35rem}
+.tools{color:var(--muted);font-size:.92rem;margin-top:6px}
+.proj ul,.job ul{margin:0;padding-left:1.1em}
+.proj li,.job li{margin:0 0 6px}
+.links{margin-top:8px;font-size:.95rem}
+.job{display:grid;grid-template-columns:170px 1fr;gap:6px 36px;padding:0 0 28px}
+.when{color:var(--muted);font-size:.95rem}
+.job h3{font-size:1.2rem;margin-bottom:2px}
+.org{color:var(--muted);margin-bottom:10px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 36px}
+.skills h3{font-size:1.05rem;margin-bottom:8px}
+.skills p{margin:0;color:var(--muted)}
+.edu{display:grid;grid-template-columns:170px 1fr;gap:4px 36px;margin-bottom:16px}
+.contact p{max-width:52ch;margin:0 0 20px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:760px){
+.hero,.proj,.job,.edu,.skills{grid-template-columns:1fr}
+.hero{padding:32px 0 48px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections">
+<a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+<div>
+<h1>Anish Kumar</h1>
+<p class="role">Data analyst turning raw datasets into clear answers, with Python, SQL, Tableau and Power BI.</p>
+<div class="btns">
+<a class="btn main" href="#projects">See my projects</a>
+<a class="btn alt" href="mailto:anishkumar.ak.job@gmail.com">Email me</a>
+</div>
+</div>
+<aside class="chart" aria-label="Tools used across my nine projects">
+<h2>Tools across my 9 projects</h2>
+<div class="bar"><span>Python</span><i style="width:89%"></i></div>
+<div class="bar"><span>pandas</span><i style="width:78%"></i></div>
+<div class="bar"><span>scikit-learn</span><i style="width:44%"></i></div>
+<div class="bar"><span>Tableau</span><i style="width:11%"></i></div>
+<div class="bar"><span>REST API</span><i style="width:11%"></i></div>
+<p>Python appears in 8 of 9 projects, pandas in 7, scikit-learn in 4, Tableau and REST API in 1 each.</p>
+</aside>
+</header>
+
+<section id="about">
+<h2>About</h2>
+<p class="about">I am an MBA (Data Science) graduate from Manipal Academy of Higher Education. I clean messy data, explore it, and present what I find in dashboards and plain language. I am looking for an entry-level Data Analyst or Junior Data Scientist role where I can learn from experienced teams and contribute early.</p>
+<span class="star">Star Performer, AICTE Oasis Infobyte internship</span>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<h3 class="sub"><a href="https://github.com/anishsharna/Coding_Ninjas_Projects" target="_blank" rel="noopener">Coding_Ninjas_Projects</a></h3>
+<article class="proj">
+<div><h3>Indian Startup Funding Analysis</h3><div class="tools">Python, pandas, Matplotlib</div><div class="links"><a href="https://github.com/anishsharna/Coding_Ninjas_Projects" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Analyzed funding data of Indian startups from January 2015 to August 2017 to find top cities, top investors, investment types and funding trends.</li>
+<li>Cleaned the dataset first: missing values, inconsistent names, and date and amount formats.</li>
+</ul>
+</article>
+<article class="proj">
+<div><h3>StayCatin Property Analytics Dashboard</h3><div class="tools">Tableau</div><div class="links"><a href="https://github.com/anishsharna/Coding_Ninjas_Projects" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Built an interactive dashboard from property listing, review and price-history data to help management make pricing and listing decisions.</li>
+<li>Analyzed how prices changed over time and how reviews relate to listings.</li>
+</ul>
+</article>
+<article class="proj">
+<div><h3>Movie Data Extraction with the TMDb API</h3><div class="tools">Python, REST API, pandas</div><div class="links"><a href="https://github.com/anishsharna/Coding_Ninjas_Projects" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Collected movie, production company and cast data from The Movie Database API using Python.</li>
+<li>Converted the JSON responses into a structured pandas DataFrame and cleaned it for analysis.</li>
+</ul>
+</article>
+<article class="proj">
+<div><h3>InstaBot - I</h3><div class="tools">Python</div><div class="links"><a href="https://github.com/anishsharna/Coding_Ninjas_Projects" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Analyzed the habits of food bloggers on Instagram: post hashtags, top likes and average likes.</li>
+<li>Automated log-in and search with Python, then extracted profile data such as followers and likes.</li>
+</ul>
+</article>
+
+<h3 class="sub next"><a href="https://github.com/anishsharna/OIBSIP" target="_blank" rel="noopener">Oasis Infobyte internship projects (Data Science)</a></h3>
+<article class="proj">
+<div><h3>Iris Flower Classification</h3><div class="tools">Python, pandas, scikit-learn, Seaborn</div><div class="links"><a href="https://github.com/anishsharna/OIBSIP" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Ran exploratory analysis on 150 flowers (pairplot, box plots) and found petal length and width the most useful features for telling species apart.</li>
+<li>Compared three classifiers on an 80/20 split: K-Nearest Neighbours 100%, Logistic Regression 96.7%, Random Forest 90% accuracy. The test set has only 30 flowers, so these scores are indicative.</li>
+</ul>
+</article>
+<article class="proj">
+<div><h3>Unemployment Analysis in India</h3><div class="tools">Python, pandas, Matplotlib, Seaborn</div><div class="links"><a href="https://github.com/anishsharna/OIBSIP" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Analyzed state-level unemployment data from May 2019 to June 2020: regional averages, monthly trends, a top 10 ranking and a correlation heatmap.</li>
+<li>Compared pre-COVID and COVID periods: average unemployment rose from 9.5% to 17.8%, and labour participation fell.</li>
+<li>Tripura, Haryana and Jharkhand had the highest average unemployment rates in the dataset.</li>
+</ul>
+</article>
+<article class="proj">
+<div><h3>Car Price Prediction</h3><div class="tools">Python, pandas, scikit-learn, Matplotlib, Seaborn</div><div class="links"><a href="https://github.com/anishsharna/OIBSIP" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Cleaned a used-car dataset of 4,340 listings, created car age and brand features, and encoded categorical variables.</li>
+<li>Compared Linear Regression, Random Forest and Gradient Boosting. Random Forest was best with R² of 0.58 and MAE of about 158,700.</li>
+</ul>
+</article>
+<article class="proj">
+<div><h3>Email Spam Detection</h3><div class="tools">Python, scikit-learn, TF-IDF, NLP</div><div class="links"><a href="https://github.com/anishsharna/OIBSIP" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Built a text-cleaning and TF-IDF pipeline to classify 5,572 SMS messages as spam or ham.</li>
+<li>Logistic Regression reached 97.9% accuracy and 92% recall on spam. Naive Bayes caught fewer spam messages (79% recall) but never flagged a genuine message as spam (100% precision).</li>
+</ul>
+</article>
+<article class="proj">
+<div><h3>Sales Prediction</h3><div class="tools">Python, pandas, scikit-learn, Matplotlib, Seaborn</div><div class="links"><a href="https://github.com/anishsharna/OIBSIP" target="_blank" rel="noopener">GitHub</a></div></div>
+<ul>
+<li>Predicted sales from TV, radio and newspaper ad spend across 200 records. Random Forest scored R² of 0.98 against 0.90 for the Linear Regression baseline.</li>
+<li>TV (62%) and radio (36%) drove predictions, while newspaper contributed about 1%.</li>
+</ul>
+</article>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="job">
+<div class="when">Sep 2026 to Oct 2026</div>
+<div><h3>Data Science Intern</h3><div class="org">Oasis Infobyte (AICTE OIB-SIP)</div>
+<ul>
+<li>Completed the one-month AICTE OIB-SIP internship in Data Science and received a certificate of completion.</li>
+<li>Recognized as a Star Performer, with a certificate of appreciation.</li>
+<li>Received a letter of recommendation from the Program Coordinator citing strong analytical and problem-solving skills, on-time delivery, and the ability to work independently and in a team.</li>
+</ul></div>
+</div>
+<div class="job">
+<div class="when">Jul 2023 to Nov 2023</div>
+<div><h3>Teaching Assistant</h3><div class="org">Coding Ninjas (Sunrise Mentors Private Limited)</div>
+<ul>
+<li>Conducted doubt sessions for students.</li>
+<li>Debugged student code and helped with assignments and projects.</li>
+</ul></div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Programming</h3><p>Python, SQL, R (basic)</p></div>
+<div><h3>Python libraries</h3><p>pandas, NumPy, Matplotlib, Seaborn</p></div>
+<div><h3>Visualization and BI</h3><p>Tableau, Power BI, Microsoft Excel</p></div>
+<div><h3>Analysis</h3><p>Data cleaning, exploratory data analysis, statistics and probability, machine learning basics, REST API data extraction</p></div>
+<div><h3>Tools</h3><p>Jupyter Notebook, Git, GitHub</p></div>
+<div><h3>Languages</h3><p>English, Hindi</p></div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education and certifications</h2>
+<div class="edu"><div class="when">2024 to 2026</div><div>Master of Business Management in Data Science<br><span class="when">Manipal Academy of Higher Education, Manipal University</span></div></div>
+<div class="edu"><div class="when">2016 to 2019</div><div>Bachelor of Arts<br><span class="when">P. K. Roy Memorial College, B.B.M.K. University</span></div></div>
+<div class="edu"><div class="when">Certifications</div><div>Data Science and Machine Learning (Coding Ninjas); Introduction to Data Analytics (Coursera); Excel Basics for Data Analysis (Coursera); Modern Data Warehouse Analytics in Microsoft Azure (Coursera)</div></div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<p>I am open to Data Analyst and Junior Data Scientist roles. Email is the fastest way to reach me.</p>
+<div class="btns">
+<a class="btn main" href="mailto:anishkumar.ak.job@gmail.com">anishkumar.ak.job@gmail.com</a>
+<a class="btn alt" href="tel:+918084331516">+91 8084331516</a>
+<a class="btn alt" href="https://www.linkedin.com/in/anish-kumar-504a75430/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn alt" href="https://github.com/anishsharna" target="_blank" rel="noopener">GitHub</a>
+</div>
+</section>
+
+<footer>Anish Kumar, Dhanbad, Jharkhand</footer>
+</div>
+</body>
+</html>
